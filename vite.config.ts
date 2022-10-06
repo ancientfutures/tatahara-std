@@ -5,20 +5,19 @@ import autoImport from 'unplugin-auto-import/vite'
 import unoCSS from 'unocss/vite'
 import { presetAttributify, presetIcons, presetUno } from 'unocss'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   optimizeDeps: { include: ['firebase/app', 'firebase/firestore'] },
   plugins: [
     unoCSS({
-      presets:[
+      presets: [
         presetUno(),
         presetIcons(),
         presetAttributify(),
-      ]
+      ],
     }),
     autoImport(),
     Components(),
-    vue()
+    vue(),
   ],
-  
+
 })
