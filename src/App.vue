@@ -11,11 +11,15 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div>
-        <h1>Contacts</h1>
+    <div font="sans">
+        <h2>Contacts</h2>
         <h3 v-for="contact in contacts" :key="contact.id">{{ contact.name}}</h3>
         <p v-for="contact in contacts" :key="contact.id">
             {{ contact.email }}
         </p>
     </div>
+    <div flex="~" justify-center>
+        <Home />
+    </div>
+    
 </template>
